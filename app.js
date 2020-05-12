@@ -9,6 +9,8 @@
      let min
      let tillBreak = 25
      let tillWork = 5
+     let tBdef
+     let tWdef
      let breakTimeout
      let workTimeout
      let countdown
@@ -33,7 +35,7 @@
                tillWork--
                     if (tillWork === 0) {
                          workD()
-                         tillWork = 5
+                         tillWork = tWdef
                          clearInterval(workTimeout)
                     }
                }
@@ -46,7 +48,7 @@
                     tillBreak--
                          if (tillBreak === 0) {
                               breakD() 
-                              tillBreak = 25
+                              tillBreak = tBdef
                               clearInterval(breakTimeout)
                          }
                     }
